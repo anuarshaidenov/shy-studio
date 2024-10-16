@@ -1,6 +1,23 @@
-import { unstable_setRequestLocale } from "next-intl/server";
+import { HeroSection } from "@/components/hero-section";
+import { Metadata } from "next";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
-export default function Home({
+export const generateMetadata = async () => {
+  const t = await getTranslations();
+
+  const metadata: Metadata = {
+    title: t("hello"),
+    description: t("hello"),
+    openGraph: {
+      title: t("hello"),
+      description: t("hello"),
+    },
+  };
+
+  return metadata;
+};
+
+export default async function Home({
   params: { locale },
 }: {
   params: { locale: string };
@@ -9,7 +26,7 @@ export default function Home({
 
   return (
     <>
-      <h1>Hello</h1>
+      <HeroSection />
     </>
   );
 }
