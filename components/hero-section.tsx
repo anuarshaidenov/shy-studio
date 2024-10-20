@@ -6,11 +6,11 @@ export const HeroSection = () => {
       <h1 className="mb-4">salem.</h1>
       <h2 className="mb-8">
         we are <span className="font-eb-garamond font-bold">shy studio</span>, a
-        creative design studio/agency that focuses on developer first approach,
-        while also trying to be as creative as possible.
+        creative design studio/agency that focuses on development first
+        approach.
       </h2>
       <div className="flex items-center gap-4 ">
-        <p>scroll down for more.</p>
+        <p>scroll down to learn more about us.</p>
         <ArrowDown className="animate-bounce" />
       </div>
     </section>
